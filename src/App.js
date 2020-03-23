@@ -16,7 +16,7 @@ function versatileChangeFile(treeKeys, value, tree) {
 
 
 function App() {
-    const [treeKeys, setTreeKeys] = useState(JSON.parse(localStorage.getItem("treeKeys")));
+    const [treeKeys, setTreeKeys] = useState(localStorage.getItem("treeKeys") === null ? [] : JSON.parse(localStorage.getItem("treeKeys")));
     return (
         <div className="App">
             {treeKeys.map((tree) => {
